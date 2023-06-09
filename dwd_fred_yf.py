@@ -7,6 +7,11 @@ import warnings
 from datetime import datetime
 warnings.filterwarnings("ignore")
 
+#api is the api key from the fredapi library, which is obtained from the FRED website
+#start is the starting date of the data
+#end is the ending date, by default it is today's date
+#interval is the date interval of the yfinance data
+#please see the readme file for parameters details
 def merge_data(api,start,end=datetime.today().strftime('%Y-%m-%d'),interval='1d',yf_code='na',fred_code='na',resamp_freq = 'no',resamp_format = 'last',remove_min="Y"):
     master_dict = {}
     df = pd.DataFrame()
