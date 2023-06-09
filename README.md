@@ -16,13 +16,20 @@ df = merge(api='XXXX',\
 
 Parameter list:
 API: The API key for the FRED API which is found from the FRED website
+
 Start: the start date of data
 End: End date of data, by default it is today's date
+
 Interval: the interval of the yfinance data
+
 yf_code: A string containing no, one or multiple yfinance codes, seperated by a comma. If no yfinance codes are needed, leave it blank (default)
+
 fred_code: Same as yf_code, but for FRED codes
+
 resamp_freq: Upsample the data to match the data frequency of the dataframe (df.resample function, 'H','D','M' etc), default is no
+
 resamp_format: get first or last data of the group, default is last
+
 remove_min: remove the minute timestamp from the datetime index, defalt is yes
 
 
