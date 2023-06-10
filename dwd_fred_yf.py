@@ -36,7 +36,7 @@ def merge_data(api,start,end=datetime.today().strftime('%Y-%m-%d'),interval='1d'
             temp = fred.get_series(code)            
             
         if source == "yfinance":
-            time.sleep(1)
+            time.sleep(1) # To slow down dowload speed from yfinance, adjustable
             ticker = yf.Ticker(code)
             temp = ticker.history(start=start,end=end,interval=interval)
             
