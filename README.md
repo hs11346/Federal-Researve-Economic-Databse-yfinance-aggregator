@@ -1,5 +1,5 @@
 # Federal-Researve-Economic-Databse-yfinance-aggregator
-This code is a wrapper around the Federal Reserve Economic Database (FRED) and yahoo finance (yfinance) API, and merges them based on customisable settings. The function that is used is merge_data.
+This code is a wrapper around the Federal Reserve Economic Database (FRED) and yahoo finance (yfinance) API, and merges them based on customisable settings. The function that is used is merge_data. It works also for only yfinance data or only FRED data.
 
 Data from yfinance include stock prices and index prices, which comes at an array of intervals such as 1m, 1d etc, while FRED data has a fixed interval for different time series data. The function have the option to resample the data to the higest-frequency interval, or just do an outer join and render the missing values as NaN.
 
@@ -30,6 +30,6 @@ resamp_freq: Upsample the data to match the data frequency of the dataframe (df.
 
 resamp_format: get first or last data of the group, default is last
 
-remove_min: remove the minute timestamp from the datetime index, defalt is yes
+remove_min: remove the minute timestamp from the datetime index, default is yes
 
 
